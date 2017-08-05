@@ -44,7 +44,7 @@ async function loadStatic(){
 		
 		staticURL[filepath] = staticObj;
 		
-		if(ext == ".png"){
+		if(ext == ".png" || ext == ".jpg"){
 			var sets = [
 				{ suffix: "/1200px", width: 1200 },
 				{ suffix: "/1000px", width: 1000 },
