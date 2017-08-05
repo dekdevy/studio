@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<style>
+		body {
+			padding: 20px;
+		}
+		
+		.card-img-top {
+			width: 100%;
+		}
+		
+	</style>
+</head>
+<body>
+<div class="container">
+	<div>
+		<h1 class="display-1">
+			m28.studio
+		</h1>
+		<h2><small class="text-muted">The catalogue of great browser MMO games</small></h2>
+	</div>
+	
+	<hr/>
+	
+	<div class="row">
+		{{#games}}
+			<div class="game col-4" style="padding: 15px;">
+				<div class="card">
+					<img class="card-img-top" src="{{imageSrc}}" srcset="{{imageSrcset}}" alt="{{caption}}" sizes="348px">
+					<div class="card-block">
+						<a target="_blank" href="{{href}}" class="btn btn-primary" style="float: right; margin-bottom: 5px">Play</a>
+						<h4 class="card-title">{{name}}</h4>
+						<p class="card-text">{{caption}}</p>
+					</div>
+				</div>
+			</div>
+		{{/games}}
+	</div>
+	
+	<hr/>
+	
+	<small class="text-muted text-center"><a href="https://github.com/Matheus28/studio">Developers</a></small>
+	
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
