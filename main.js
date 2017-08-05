@@ -48,8 +48,8 @@ async function loadStatic(){
 			var sets = [
 				{ suffix: "/1200px", width: 1200 },
 				{ suffix: "/1000px", width: 1000 },
-				{ suffix: "/700px", width: 700 },
-				{ suffix: "/348px", width: 348, isDefault: true },
+				{ suffix: "/710px", width: 710 },
+				{ suffix: "/355px", width: 355, isDefault: true },
 			];
 			
 			await Promise.all(sets.map(async function(set){
