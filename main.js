@@ -101,6 +101,25 @@ async function loadData(){
 app.get("/", simpleHandler(async function(req){
 	shuffle(games);
 	
+	var cardClasses = [
+		"card-outline-primary",
+		"card-outline-success",
+		"card-outline-warning",
+		"card-outline-danger",
+	];
+	
+	var btnClasses = [
+		"btn-primary",
+		"btn-success",
+		"btn-warning",
+		"btn-danger",
+	];
+	
+	games.forEach(function(game, i){
+		game.cardClass = cardClasses[i % cardClasses.length];
+		game.btnClass = btnClasses[i % btnClasses.length];
+	});
+	
 	return template({
 		games: games,
 	});
