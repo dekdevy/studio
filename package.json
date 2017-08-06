@@ -1,7 +1,7 @@
 {
 	"name": "m28.studio",
 	"main": "main.js",
-	"license": "GPLv2",
+	"license": "GPL-2.0",
 	"dependencies": {
 		"express": "^4.15.3",
 		"fs-extra": "^4.0.1",
