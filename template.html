@@ -39,6 +39,10 @@
 			top: 0;
 		}
 		
+		.card-block {
+			padding: 0.75rem;
+		}
+		
 		.m28-first-party.card-outline-primary .card-block::after {
 			border-color: transparent transparent #0275d8 transparent;
 		}
@@ -81,7 +85,7 @@ ga('send', 'pageview');
 			<div class="game card {{cardClass}}">
 				<a target="_blank" href="{{href}}"><img class="card-img-top" src="{{imageSrc}}" srcset="{{imageSrcset}}" alt="{{name}}" sizes="355px"></a>
 				<div class="card-block">
-					<a target="_blank" href="{{href}}" class="btn {{btnClass}}" style="float: right; margin: 5px 0px 5px 5px">Play</a>
+					<a target="_blank" href="{{href}}" class="btn {{btnClass}}" style="float: right; margin: 5px">Play</a>
 					<!--<h4 class="card-title">{{name}}</h4>-->
 					<p class="card-text">{{caption}}</p>
 				</div>
