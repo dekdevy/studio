@@ -2,5 +2,6 @@
 	"name": "Diep.io",
 	"href": "http://diep.io/",
 	"image": "images/diepio.png",
-	"caption": "Fight other tanks to survive in this highly competitive arena"
+	"caption": "Fight other tanks to survive in this highly competitive arena",
+	"firstParty": true
 }

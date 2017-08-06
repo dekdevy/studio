@@ -2,5 +2,6 @@
 	"name": "Cursors.io",
 	"href": "http://cursors.io/",
 	"image": "images/cursors.png",
-	"caption": "Collaborate (or not) with other cursors to progress further"
+	"caption": "Collaborate (or not) with other cursors to progress further",
+	"firstParty": true
 }

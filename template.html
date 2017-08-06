@@ -17,6 +17,33 @@
 			width: 100%;
 		}
 		
+		.m28-first-party.card .card-block::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 0 10px 10px;
+		}
+		
+		.m28-first-party.card-outline-primary .card-block::after {
+			border-color: transparent transparent #0275d8 transparent;
+		}
+		
+		.m28-first-party.card-outline-success .card-block::after {
+			border-color: transparent transparent #5cb85c transparent;
+		}
+		
+		.m28-first-party.card-outline-warning .card-block::after {
+			border-color: transparent transparent #f0ad4e transparent;
+		}
+		
+		.m28-first-party.card-outline-danger .card-block::after {
+			border-color: transparent transparent #d9534f transparent;
+		}
+		
 	</style>
 </head>
 <body>
@@ -55,7 +82,7 @@ ga('send', 'pageview');
 	
 	<center>
 	<small class="text-muted">
-		Not all games are developed by m28.studio
+		Games developed by us are marked with a triangle in the corner, others are games we love
 		&sdot;
 		<a href="https://github.com/Matheus28/studio">source</a>
 	</small>

@@ -122,6 +122,7 @@ app.get("/", simpleHandler(async function(req){
 	games.forEach(function(game, i){
 		game.cardClass = cardClasses[i % cardClasses.length];
 		game.btnClass = btnClasses[i % btnClasses.length];
+		if(game.firstParty) game.cardClass += " m28-first-party";
 	});
 	
 	return template({
