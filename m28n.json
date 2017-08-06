@@ -12,7 +12,13 @@
 	
 	"run": "chmod +x run.sh && ./run.sh",
 	"package": [
-		"."
+		"data",
+		"static",
+		"main.js",
+		"run.sh",
+		"template.html",
+		"package.json",
+		"package-lock.json"
 	],
 	
 	"regions": [
