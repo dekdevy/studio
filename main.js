@@ -47,10 +47,9 @@ async function loadStatic(){
 		
 		if(ext == ".png" || ext == ".jpg"){
 			var sets = [
-				{ suffix: "/1200px", width: 1200 },
-				{ suffix: "/1000px", width: 1000 },
-				{ suffix: "/710px", width: 710 },
-				{ suffix: "/355px", width: 355, isDefault: true },
+				{ suffix: "/1200", width: 1200 },
+				{ suffix: "/800", width: 800 },
+				{ suffix: "/400", width: 400, isDefault: true },
 			];
 			
 			await Promise.all(sets.map(async function(set){
