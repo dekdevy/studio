@@ -1,6 +1,7 @@
 #!/bin/sh
 
-apt-get install -yq python
+apt-get update
+apt-get install -yq python build-essential
 
 rm -rf node_modules
 npm install
