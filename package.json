@@ -7,6 +7,7 @@
 		"fs-extra": "^4.0.1",
 		"handlebars": "^4.0.10",
 		"recursive-readdir": "^2.2.1",
-		"sharp": "^0.18.2"
+		"sharp": "^0.18.2",
+		"tempy": "^0.1.0"
 	}
 }

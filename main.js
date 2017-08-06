@@ -5,6 +5,7 @@ const path = require("path");
 const crypto = require("crypto");
 const readdir = require("recursive-readdir");
 const sharp = require("sharp");
+const tempy = require('tempy');
 
 const app = express();
 
@@ -67,9 +68,11 @@ async function loadStatic(){
 				
 				set.height = set.height || ((set.width * 3 / 4)|0);
 				
-				var buf = await sharp(filename).resize(set.width, set.height).crop().toBuffer();
+				var tmpFilename = tempy.file({ extension: ext });
+				
+				var buf = await sharp(filename).resize(set.width, set.height).crop().toFile(tmpFilename);
 				app.get(url, function(req, res){
-					res.header("Content-Type", "image/png").send(buf);
+					res.sendFile(tmpFilename);
 				});
 			}));
 		}else{
