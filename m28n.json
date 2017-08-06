@@ -1,0 +1,22 @@
+{
+	"project": "studio",
+	"endpoint": "studio",
+	"httpHealthCheck": [ 80 ],
+	
+	"minServers": 1,
+	"shutdownTimeout": 30,
+	"updateKeepAliveMin": 2,
+	"updateKeepAliveMax": 5,
+	"serverSize": 0,
+	"endpointBehaviorOnUpdate": "clear",
+	
+	"run": "chmod +x run.sh && ./run.sh",
+	"package": [
+		"."
+	],
+	
+	"regions": [
+		"linode-fremont",
+		"vultr-seattle"
+	]
+}
