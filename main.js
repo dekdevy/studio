@@ -88,6 +88,8 @@ async function loadData(){
 		
 		var obj = await fs.readJson(filename);
 		
+		if(obj.disabled) return;
+		
 		if(obj.image){
 			if(!staticURL.hasOwnProperty(obj.image)) throw new Error("Image not found: " + obj.image);
 			obj.imageSrc = staticURL[obj.image].src;
