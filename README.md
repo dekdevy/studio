@@ -9,3 +9,7 @@ A simple catalogue of the browser MMO games with a lot of focus on being well cu
 Please submit a pull request with a data file (see the "data/" directory for examples) and a 1200x800 png image.
 
 Remember that the vetting process is pretty rigorous, it's essentially done by [me](https://github.com/Matheus28/) alone, and I prefer games that I find fun, unique and/or interesting.
+
+## Do I need to link back to m28.studio?
+
+Not at all. We provide a small advantage to games that do, making it more likely that they'll be closer to the top of the list. But you're not required to link to the list to be featured here.

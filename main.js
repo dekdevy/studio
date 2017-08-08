@@ -103,8 +103,6 @@ async function loadData(){
 }
 
 app.get("/", simpleHandler(async function(req){
-	shuffle(games);
-	
 	var cardClasses = [
 		"card-outline-primary",
 		"card-outline-success",
@@ -120,10 +118,20 @@ app.get("/", simpleHandler(async function(req){
 	];
 	
 	games.forEach(function(game, i){
+		var bonus = 1.0;
+		
+		if(game.hasLinkBack) bonus += 0.3;
+		
+		game.sortOrder = Math.pow(Math.random(), bonus);
+		
 		game.cardClass = cardClasses[i % cardClasses.length];
 		game.btnClass = btnClasses[i % btnClasses.length];
 		if(game.firstParty) game.cardClass += " m28-first-party";
 	});
+	
+	games.sort(function(a, b){
+		return a.sortOrder - b.sortOrder;
+	})
 	
 	return template({
 		games: games,
@@ -148,20 +156,6 @@ function simpleHandler(fn){
 			res.status(500).send("Internal error");
 		});
 	}
-}
-
-function shuffle(arr) {
-	var i = arr.length;
-	while(i != 0) {
-		var j = Math.floor(Math.random() * i);
-		--i;
-
-		var tmp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = tmp;
-	}
-
-	return arr;
 }
 
 init().catch(function(err){
