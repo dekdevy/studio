@@ -13,3 +13,5 @@ Remember that the vetting process is pretty rigorous, it's essentially done by [
 ## Do I need to link back to m28.studio?
 
 Not at all. We provide a small advantage to games that do, making it more likely that they'll be closer to the top of the list. But you're not required to link to the list to be featured here.
+
+If you do link back to m28.studio, please prefer naming the link "More games", as the term ".io games" is incredibly non-descriptive.
