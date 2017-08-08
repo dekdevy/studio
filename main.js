@@ -26,10 +26,12 @@ async function init(){
 }
 
 async function loadStatic(){
-	var dir = __dirname + "/static/";
+	var dir = (__dirname + "/static/").replace(/\\/g, "/");
 	var files = await readdir(dir);
 	await Promise.all(files.map(async function(filename){
-		if(filename.indexOf(dir) != 0) throw new Error("Assert error");
+		filename = filename.replace(/\\/g, "/");
+		
+		if(filename.indexOf(dir) != 0) throw new Error("Assert error: '" + filename + "' doesn't start with '" + dir + "'");
 		if(filename.split("/").pop()[0] == ".") return;
 		
 		var ext = path.extname(filename);
@@ -86,7 +88,9 @@ async function loadData(){
 	var files = await readdir(__dirname + "/data/");
 	
 	await Promise.all(files.map(async function(filename){
-		if(filename.split("/").pop()[0] == ".") return;
+		filename = filename.replace(/\\/g, "/");
+		
+		if(filename.split(".").pop() != "json") return;
 		
 		var obj = await fs.readJson(filename);
 		
