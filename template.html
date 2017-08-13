@@ -78,6 +78,12 @@
 			border-color: transparent transparent #d9534f transparent;
 		}
 		
+		.play-button {
+			float: right;
+			margin: 5px;
+			color: #FFF;
+		}
+		
 	</style>
 </head>
 <body>
@@ -104,7 +110,7 @@ ga('send', 'pageview');
 			<div class="game card {{cardClass}}">
 				<a target="_blank" href="{{href}}"><img class="card-img-top" src="{{imageSrc}}" srcset="{{imageSrcset}}" alt="{{name}}" sizes="355px"></a>
 				<div class="card-block">
-					<a target="_blank" href="{{href}}" class="btn {{btnClass}}" style="float: right; margin: 5px">Play</a>
+					<a target="_blank" href="{{href}}" class="play-button btn {{btnClass}}">Play</a>
 					<!--<h4 class="card-title">{{name}}</h4>-->
 					<p class="card-text">{{caption}}</p>
 				</div>
